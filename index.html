@@ -49,7 +49,7 @@
             if( y + dy < ballRadius || y + dy > canvas.height-ballRadius){
                 dy = -dy;
             }
-            if(y + dy > canvas.height-paddleHeight && x + dx > paddleX && x < paddleX + paddleWidth){
+            if(y + dy > canvas.height-(paddleHeight + ballRadius + 5) && x + dx > paddleX && x + dx < paddleX + paddleWidth){
                 dy = -dy;
             }
 
@@ -73,7 +73,7 @@
         function drawPaddle()
         {
             ctx.beginPath();
-            ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
+            ctx.rect(paddleX, canvas.height-(paddleHeight + 5), paddleWidth, paddleHeight);
             ctx.fillStyle = "turquoise";
             ctx.fill();
             ctx.closePath();
