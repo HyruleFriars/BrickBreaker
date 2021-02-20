@@ -40,8 +40,8 @@
         function draw()
         {
             ctx.clearRect(0, 0, cavas.width, canvas.height);
-            drawPaddle;
-            drawBall;
+            drawPaddle();
+            drawBall();
 
             if(x + dx < ballRadius || x + dx > canvas.width-ballRadius){
                 dx = -dx;
@@ -102,7 +102,7 @@
         document.addEventListener("keydown", keyDownHandler, false);
         document.addEventListener("keyup", keyUpHandler, false);
 
-        setInterval(draw, 10);
+        setInterval(draw(), 10);
 
     </script>
     
