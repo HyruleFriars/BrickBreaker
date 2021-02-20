@@ -40,8 +40,8 @@
         function draw()
         {
             ctx.clearRect(0, 0, cavas.width, canvas.height);
-            drawPaddle();
-            drawBall();
+            drawPaddle;
+            drawBall;
 
             if(x + dx < ballRadius || x + dx > canvas.width-ballRadius){
                 dx = -dx;
@@ -103,11 +103,6 @@
         document.addEventListener("keyup", keyUpHandler, false);
 
         setInterval(draw, 10);
-        ctx.beginPath();
-            ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
-            ctx.fillStyle = "turquoise";
-            ctx.fill();
-            ctx.closePath();
 
     </script>
     
