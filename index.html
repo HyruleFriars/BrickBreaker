@@ -17,8 +17,8 @@
     <script>
         var canvas = document.getElementById("myCanvas");
         var ctx = canvas.getContext("2d");
-        var x = 240;
-        var y = 290;
+        var x = canvas.width/2;
+        var y = canvas.height-30;
         var dx = 2;
         var dy = -2;
         var ballRadius = 10;
@@ -103,6 +103,11 @@
         document.addEventListener("keyup", keyUpHandler, false);
 
         setInterval(draw, 10);
+        ctx.beginPath();
+            ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
+            ctx.fillStyle = "turquoise";
+            ctx.fill();
+            ctx.closePath();
 
     </script>
     
