@@ -102,7 +102,11 @@
         document.addEventListener("keydown", keyDownHandler, false);
         document.addEventListener("keyup", keyUpHandler, false);
 
-        setInterval(draw, 10);
+        ctx.beginPath();
+            ctx.arc(x, y, ballRadius, 0, Math.PI*2);
+            ctx.fillStyle = "turquoise";
+            ctx.fill();
+            ctx.closePath();
 
     </script>
     
